@@ -31,7 +31,7 @@ for word in words:
 		update_score[1][letter_pos]=update_score[1][letter_pos]+1
 		scores[letter]=update_score
 
-writeScores("results/word_strength.txt",words)
+writeScores("extra_results\\word_strength.txt",words)
 
 def calulator(yellow, green):
 	word_scores={}
@@ -60,13 +60,13 @@ def calulator(yellow, green):
 	#sorts the words according to their scores
 	bubbleSort(word_scores_array)
     
-	file_name="extra_results_"
+	file_name="extra_results\\"
 	if(yellow):
 		file_name+="yellow_"
 	if(green):
 		file_name+="green_"
 	file_name+="probability_scores.txt"
-	writeScores("results/"+file_name,word_scores_array)
+	writeScores(file_name,word_scores_array)
 
 	#This determains the strong words according to the last system. It finds the strongest words with no corralating letters.
 	used_letters=""
